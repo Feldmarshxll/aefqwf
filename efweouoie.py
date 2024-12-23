@@ -1,11 +1,15 @@
-n = int(input())
+a = int(input())
+ch = a % 10
+ans = True
 
-lol = str(n)
-
-lol1 = max(lol)
-lol2 = min(lol)
-
-if lol1 >= lol2:
-    print('YES')
+while a > 9:
+    a //= 10
+    ch1 = a % 10
+    if ch1 < ch:
+        ans = False
+        break
+    ch = ch1
+if ans:
+    print("YES")
 else:
     print('NO')
