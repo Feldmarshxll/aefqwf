@@ -49,4 +49,4 @@ try:
     else:
         print('ТЫ ЧО ТУПОЙ ЧТО-ЛИ?')
 except:
-    print('cazzo stai scherzando')
+    print('cazzo stai scherzando?')
