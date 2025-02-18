@@ -1,6 +1,7 @@
 import math
 one_digit = ['sqrt', 'log', 'log10', 'factorial', 'sin', 'cos', 'tan']
 two_digits = ['+', '-', '/', '*', 'pow', '//', '%', 'log(x, b)']
+not_zero_operations = ['/', '//', '%']
 operation = input('Введите математическую операцию(+, -, /, *, pow, //, %, sqrt, log, log10, log(x, b), factorial, sin, cos, tan): ')
 if operation in one_digit:
     n = int(input('Введите число: '))
@@ -23,23 +24,26 @@ if operation in one_digit:
 elif operation in two_digits:
     a = int(input('Введите первое число: '))
     b = int(input('Введите второе число: '))
-    if operation == '+':
-        print(f'Сумма чисел {a} и {b} равна {a + b}')
-    elif operation == '-':
-        print(f'Разность чисел {a} и {b} равна {a - b}')
-    elif operation == '/':
-        print(f'Деление чисел {a} b {b} равна {a / b}')
-    elif operation == '*':
-        print(f'Число {a} умноженное на {b} равно {a * b}')
-    elif operation == 'pow':
-        print(f'Число {a} возведённое в степень {b} равно {math.pow(a, b)}, а число {b} возведённое в степень {a} равно {math.pow(b, a)}')
-    elif operation == '//':
-        print(f'Целочисленное деление числа {a} на число {b} равно {a // b}')
-    elif operation == '%':
-        print(f'Остаток от деления числа {a} на число {b} равно {a % b}')
-    elif operation == 'log(x, b)':
-        print(f'Логарифм числа {a} с основанием {b} равен {math.log(a, b)}')
+    if operation in not_zero_operations and b == 0:
+        print('А по попе за деление на ноль?')
     else:
-        print('КАК')
+        if operation == '+':
+            print(f'Сумма чисел {a} и {b} равна {a + b}')
+        elif operation == '-':
+            print(f'Разность чисел {a} и {b} равна {a - b}')
+        elif operation == '/':
+            print(f'Деление чисел {a} и {b} равна {a / b}')
+        elif operation == '*':
+            print(f'Число {a} умноженное на {b} равно {a * b}')
+        elif operation == 'pow':
+            print(f'Число {a} возведённое в степень {b} равно {math.pow(a, b)}, а число {b} возведённое в степень {a} равно {math.pow(b, a)}')
+        elif operation == '//':
+            print(f'Целочисленное деление числа {a} на число {b} равно {a // b}')
+        elif operation == '%':
+            print(f'Остаток от деления числа {a} на число {b} равно {a % b}')
+        elif operation == 'log(x, b)':
+            print(f'Логарифм числа {a} с основанием {b} равен {math.log(a, b)}')
+        else:
+            print('КАК')
 else:
     print('ТЫ ЧО ТУПОЙ ЧТО-ЛИ?')
