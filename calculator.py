@@ -5,7 +5,7 @@ try:
     not_zero_operations = ['/', '//', '%']
     operation = input('Введите математическую операцию(+, -, /, *, pow, //, %, sqrt, log, log10, log(x, b), factorial, sin, cos, tan): ')
     if operation in one_digit:
-        n = int(input('Введите число(ВВОДИТЬ ТОЛЬКО ЧИСЛО БЕЗ ВСЯКИХ КАВЫЧЕК): '))
+        n = eval(input('Введите число(ВВОДИТЬ ТОЛЬКО ЧИСЛО БЕЗ ВСЯКИХ КАВЫЧЕК): '))
         if operation == 'sqrt':
             print(f'Корень числа {n} равен {math.sqrt(n)}')
         elif operation == 'log':
@@ -23,8 +23,8 @@ try:
         else:
             print('КАК')
     elif operation in two_digits:
-        a = int(input('Введите первое число(ВВОДИТЬ ТОЛЬКО ЧИСЛО БЕЗ ВСЯКИХ КАВЫЧЕК): '))
-        b = int(input('Введите второе число(ВВОДИТЬ ТОЛЬКО ЧИСЛО БЕЗ ВСЯКИХ КАВЫЧЕК): '))
+        a = eval(input('Введите первое число(ВВОДИТЬ ТОЛЬКО ЧИСЛО БЕЗ ВСЯКИХ КАВЫЧЕК): '))
+        b = eval(input('Введите второе число(ВВОДИТЬ ТОЛЬКО ЧИСЛО БЕЗ ВСЯКИХ КАВЫЧЕК): '))
         if operation in not_zero_operations and b == 0:
             print('А по попе за деление на ноль?')
         else:
@@ -49,4 +49,4 @@ try:
     else:
         print('ТЫ ЧО ТУПОЙ ЧТО-ЛИ?')
 except:
-    print('uno idioto')
+    print('cazzo stai scherzando')
