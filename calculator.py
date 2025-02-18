@@ -3,7 +3,7 @@ one_digit = ['sqrt', 'log', 'log10', 'factorial', 'sin', 'cos', 'tan']
 two_digits = ['+', '-', '/', '*', 'pow', '//', '%', 'log(x, b)']
 operation = input('Введите математическую операцию(+, -, /, *, pow, //, %, sqrt, log, log10, log(x, b), factorial, sin, cos, tan): ')
 if operation in one_digit:
-    n = int(input())
+    n = int(input('Введите число: '))
     if operation == 'sqrt':
         print(f'Корень числа {n} равен {math.sqrt(n)}')
     elif operation == 'log':
@@ -21,8 +21,8 @@ if operation in one_digit:
     else:
         print('КАК')
 elif operation in two_digits:
-    a = int(input())
-    b = int(input())
+    a = int(input('Введите первое число: '))
+    b = int(input('Введите второе число: '))
     if operation == '+':
         print(f'Сумма чисел {a} и {b} равна {a + b}')
     elif operation == '-':
