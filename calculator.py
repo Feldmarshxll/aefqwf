@@ -47,6 +47,6 @@ try:
             else:
                 print('КАК')
     else:
-        print('ТЫ ЧО ТУПОЙ ЧТО-ЛИ?')
+        print('Ну ты конечно орех')
 except:
     print('cazzo stai scherzando?')
